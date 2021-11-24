@@ -1,0 +1,139 @@
+// глобальные стили кроме normalize
+
+.container {
+	@include make-container();
+	@include make-container-max-widths();
+}
+
+img {
+	@include img-fluid();
+}
+
+.intro {
+	background-image: url("../img/icons/intro-bg.png");
+	text-align: center;
+	background-color: $black;
+	color: $white;
+
+	padding-top: 60px;
+	padding-bottom: 120px;
+
+	&__head {
+		max-width: 715px;
+		margin: 0 auto;
+	}
+	&__title {
+		margin-bottom: 20px;
+	}
+	&__text {
+		margin-bottom: 48px;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 17px;
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	svg {
+		transition: $transition-base;
+		align-self: center;
+		path:first-child {
+			fill: none;
+			stroke: $white;
+			fill-opacity: 0.25;
+		}
+	}
+	&:hover {
+		svg {
+			path:first-child {
+				fill: $green;
+				stroke: $green;
+			}
+		}
+	}
+	&__title {
+		margin-top: 31px;
+		margin-bottom: 10px;
+		span {
+			color: $green;
+		}
+	}
+	&__text {
+		margin-bottom: 33px;
+	}
+}
+
+.modal {
+	&-dialog {
+		max-width: 540px;
+	}
+	&-body {
+		z-index: 1;
+	}
+	.close {
+		position: absolute;
+		top: 4px;
+		right: 1px;
+		background-color: transparent;
+		border: none;
+		box-shadow: none;
+		outline: none;
+		z-index: 10;
+	}
+	&-content {
+		position: relative;
+		border-radius: 0px;
+		background-color: $black;
+		color: $white;
+		text-align: center;
+		border: 2px solid $green;
+		box-shadow: 0px 0px 20px rgba(119, 185, 0, 0.5);
+
+		max-width: 540px;
+		width: 100%;
+		padding: 10px 10px;
+	}
+	&--title {
+		margin-bottom: 20px;
+	}
+}
+
+.form {
+	&__field {
+		display: flex;
+		flex-direction: column;
+	}
+	&__input {
+		padding: 13px 20px;
+		margin-bottom: 19px;
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+@include media(min,md){
+	.intro {
+		text-align: center;
+		&__list {
+			justify-content: space-between;
+		}
+	}
+
+	.card {
+		max-width: 250px;
+		text-align: left;
+	}
+
+	.modal {
+		&-content {
+			padding: 54px 76px;
+		}
+	}
+}

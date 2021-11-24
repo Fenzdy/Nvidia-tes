@@ -1,0 +1,19 @@
+header.header
+	.container
+		.header__content
+			.header__logo
+				include ../../img/icons/logo.svg
+			nav.menu.js-menu
+				.menu__list
+					a(class='menu__item' href='#') Продукты
+					a(class='menu__item' href='#') Технологии
+					a(class='menu__item' href='#') Experience
+
+				.social-links
+					a(class='social-links__item' href='#')
+						include ../../img/icons/twitter.svg
+					a(class='social-links__item' href='#')
+						include ../../img/icons/instagram.svg
+
+			.header__hamburger.js-hamburger
+				include ../../img/icons/hamburger.svg

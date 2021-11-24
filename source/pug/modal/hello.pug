@@ -1,0 +1,15 @@
+#helloModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content
+			button.close(type='button' data-dismiss='modal' aria-label='Close') .
+				include ../../img/icons/close.svg
+			.modal-body
+				h2.heading-h1.modal--title
+					| ПРЕИМУЩЕСТВА
+					nowrap G-SYNC
+				form.form
+					.form__field
+
+						input(type='text', name='name' class='form__input' placeholder='Имя')
+						input(type='email', name='email' class='form__input' placeholder='Mail')
+					button.btn.btn--secondary(type='button' data-dismiss='modal') КУПИТЬ
